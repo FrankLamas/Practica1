@@ -1,0 +1,202 @@
+falco@DESKTOP-K01NA5O MINGW64 ~
+$ git
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone      Clone a repository into a new directory
+   init       Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add        Add file contents to the index
+   mv         Move or rename a file, a directory, or a symlink
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect     Use binary search to find the commit that introduced a bug
+   grep       Print lines matching a pattern
+   log        Show commit logs
+   show       Show various types of objects
+   status     Show the working tree status
+
+grow, mark and tweak your common history
+   branch     List, create, or delete branches
+   checkout   Switch branches or restore working tree files
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   merge      Join two or more development histories together
+   rebase     Reapply commits on top of another base tip
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch      Download objects and refs from another repository
+   pull       Fetch from and integrate with another repository or a local branch
+   push       Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+
+falco@DESKTOP-K01NA5O MINGW64 ~
+$ git config --global user.name "Frank"
+
+falco@DESKTOP-K01NA5O MINGW64 ~
+$ git config --global user.email "a.flamas@itstequila.edu.mx"
+
+falco@DESKTOP-K01NA5O MINGW64 ~
+$ cd desktop
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop
+$ ls
+'Carlos tareas'/        'Daniela XV'/  'GitHub Desktop.lnk'*                                             karol.pdf   MABEJI/
+'curriculum Frank.doc'   desktop.ini   'INTRODUCCIÓN a la seguridad de los sistemas distribuidos.pptx'   Libros/    'Visual Studio 2012.lnk'*
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop
+$ mkdir RepositorioSO2
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop
+$ cd RepositorioSO2
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2
+$ git init
+Initialized empty Git repository in C:/Users/falco/Desktop/RepositorioSO2/.git/
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git add.
+git: 'add.' is not a git command. See 'git --help'.
+
+The most similar command is
+        add
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git add .
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git commit -m "Estoy subien un piano bien bergas"
+[master (root-commit) ee08749] Estoy subien un piano bien bergas
+ 10 files changed, 83 insertions(+)
+ create mode 100644 Piano/Ejercicio.txt
+ create mode 100644 "Piano/audio/C\303\221ORA.mp3"
+ create mode 100644 Piano/audio/DO.wav
+ create mode 100644 Piano/audio/FA.wav
+ create mode 100644 Piano/audio/LA.wav
+ create mode 100644 Piano/audio/MI.wav
+ create mode 100644 Piano/audio/RE.wav
+ create mode 100644 Piano/audio/SI.wav
+ create mode 100644 Piano/audio/SOL.wav
+ create mode 100644 Piano/index.html
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git log
+commit ee08749206a3a9092d01c818b3cfe4d0e01abdee (HEAD -> master)
+Author: Frank <a.flamas@itstequila.edu.mx>
+Date:   Wed May 22 14:30:59 2019 -0500
+
+    Estoy subien un piano bien bergas
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git commit -m "Estoy subiendo un piano bien bergas y un archivo de testo"
+On branch master
+Changes not staged for commit:
+        modified:   Piano/Ejercicio.txt
+
+no changes added to commit
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git commit -m "archivo de texto"
+On branch master
+Changes not staged for commit:
+        modified:   Piano/Ejercicio.txt
+
+no changes added to commit
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git commit -m "archivo de texto"
+On branch master
+Changes not staged for commit:
+        modified:   Piano/Ejercicio.txt
+
+Untracked files:
+        Piano/Nuevo.txt
+
+no changes added to commit
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git add .
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git commit -m "archivo de texto"
+[master 1e80698] archivo de texto
+ 2 files changed, 4 insertions(+), 1 deletion(-)
+ create mode 100644 Piano/Nuevo.txt
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git log
+commit 1e806987922c33bc5302fbbb9313b8ed7002587c (HEAD -> master)
+Author: Frank <a.flamas@itstequila.edu.mx>
+Date:   Wed May 22 14:36:09 2019 -0500
+
+    archivo de texto
+
+commit ee08749206a3a9092d01c818b3cfe4d0e01abdee
+Author: Frank <a.flamas@itstequila.edu.mx>
+Date:   Wed May 22 14:30:59 2019 -0500
+
+    Estoy subien un piano bien bergas
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Piano/Ejercicio.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git add .
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git commit -m "ME WA DORMIRRRRRRR"
+[master dd21426] ultima modificación
+ 1 file changed, 1 deletion(-)
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ git log
+commit dd2142604e627e4bfeb1c560cf93f72a0b1f497a (HEAD -> master)
+Author: Frank <a.flamas@itstequila.edu.mx>
+Date:   Wed May 22 14:37:17 2019 -0500
+
+    ultima modificación
+
+commit 1e806987922c33bc5302fbbb9313b8ed7002587c
+Author: Frank <a.flamas@itstequila.edu.mx>
+Date:   Wed May 22 14:36:09 2019 -0500
+
+    archivo de texto
+
+commit ee08749206a3a9092d01c818b3cfe4d0e01abdee
+Author: Frank <a.flamas@itstequila.edu.mx>
+Date:   Wed May 22 14:30:59 2019 -0500
+
+    Estoy subien un piano bien bergas
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$ ^C
+
+
+falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
+$
