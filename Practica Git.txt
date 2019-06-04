@@ -170,7 +170,7 @@ falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
 $ git add .
 
 falco@DESKTOP-K01NA5O MINGW64 ~/desktop/RepositorioSO2 (master)
-$ git commit -m "ultima modificación"
+$ git commit -m "Mi profe no sabe dar la clase :D"
 [master dd21426] ultima modificación
  1 file changed, 1 deletion(-)
 
